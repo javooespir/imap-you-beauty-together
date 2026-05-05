@@ -129,7 +129,7 @@ const Index = () => {
       {/* COSMIATRIA HIGHLIGHT */}
       <section id="cosmiatria" className="py-24 md:py-32 bg-blush/30">
         <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
-          <img src={logoBianca} alt="Bianca Cambiasso" className="w-72 h-72 md:w-96 md:h-96 rounded-full object-contain bg-cream shadow-soft mx-auto" />
+          <img src={logoBianca} alt="Bianca Cambiasso" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-contain bg-cream shadow-soft mx-auto" />
           <div>
             <p className="text-xs tracking-[0.4em] text-rose-deep uppercase mb-4">Cosmiatría profesional</p>
             <h2 className="font-display text-4xl md:text-5xl text-burgundy mb-6 leading-tight">Tu piel, en manos expertas</h2>
