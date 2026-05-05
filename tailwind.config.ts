@@ -13,7 +13,25 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif'],
+        display: ['Italiana', 'serif'],
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-soft': 'var(--gradient-soft)',
+        'gradient-burgundy': 'var(--gradient-burgundy)',
+      },
+      boxShadow: {
+        soft: 'var(--shadow-soft)',
+        glow: 'var(--shadow-glow)',
+      },
       colors: {
+        blush: 'hsl(var(--blush))',
+        cream: 'hsl(var(--cream))',
+        burgundy: 'hsl(var(--burgundy))',
+        'rose-deep': 'hsl(var(--rose-deep))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
