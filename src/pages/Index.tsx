@@ -151,24 +151,56 @@ const Index = () => {
       </section>
 
       {/* TURNOS - PROXIMAMENTE */}
-      <section id="turnos" className="py-24 md:py-32 bg-cream">
+      <section id="turnos" className="py-24 md:py-32 bg-gradient-to-b from-cream via-cream to-blush/20">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden bg-gradient-burgundy p-12 md:p-20 text-center shadow-soft">
+          <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden bg-gradient-burgundy p-12 md:p-16 text-center shadow-soft">
             <div className="absolute -top-20 -right-20 w-72 h-72 bg-blush/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blush/10 rounded-full blur-3xl" />
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream/10 border border-cream/20 text-cream/90 text-xs tracking-[0.3em] uppercase mb-6">
+            <div className="relative space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream/10 border border-cream/20 text-cream/90 text-xs tracking-[0.3em] uppercase">
                 <CalendarClock className="w-3.5 h-3.5" /> Próximamente
               </div>
-              <h2 className="font-display text-4xl md:text-6xl text-cream mb-4">Agenda de Turnos Online</h2>
-              <p className="text-cream/80 font-light max-w-xl mx-auto mb-8">
-                Estamos preparando una agenda online para que reserves tu turno en segundos,
-                elijas profesional y recibas recordatorios automáticos.
-              </p>
-              <Button disabled className="bg-cream/15 text-cream/60 rounded-full px-8 h-12 cursor-not-allowed border border-cream/20">
-                Reservar turno · Próximamente
+              <div>
+                <h2 className="font-display text-4xl md:text-5xl text-cream mb-4">Agenda de Turnos Online</h2>
+                <p className="text-cream/80 font-light max-w-2xl mx-auto">
+                  Estamos preparando una agenda online para que reserves tu turno en segundos,
+                  elijas profesional y recibas recordatorios automáticos.
+                </p>
+              </div>
+
+              {/* DEMO CALENDAR */}
+              <div className="mt-12 max-w-2xl mx-auto">
+                <div className="grid grid-cols-3 gap-3 md:gap-4">
+                  {/* Demo days */}
+                  {[
+                    { day: "Lunes", times: ["09:00", "14:00", "16:30"] },
+                    { day: "Martes", times: ["10:00", "15:00", "17:00"] },
+                    { day: "Miércoles", times: ["09:30", "14:30"] },
+                  ].map((slot) => (
+                    <div key={slot.day} className="bg-cream/10 backdrop-blur-sm rounded-xl p-4 border border-cream/20 hover:bg-cream/15 transition">
+                      <p className="text-cream font-display text-sm md:text-base mb-3">{slot.day}</p>
+                      <div className="space-y-2">
+                        {slot.times.map((time) => (
+                          <button
+                            key={time}
+                            disabled
+                            className="w-full py-1.5 px-3 text-xs md:text-sm rounded-lg bg-cream/5 text-cream/70 border border-cream/10 cursor-not-allowed hover:bg-cream/10 transition"
+                          >
+                            {time}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-cream/60 text-xs md:text-sm mt-6 font-light">
+                  Mientras tanto, escribinos por WhatsApp para coordinar.
+                </p>
+              </div>
+
+              <Button disabled className="bg-cream/15 text-cream/60 rounded-full px-8 h-12 cursor-not-allowed border border-cream/20 inline-flex items-center gap-2">
+                <CalendarClock className="w-4 h-4" /> Reservar turno · Próximamente
               </Button>
-              <p className="text-cream/60 text-xs mt-6">Mientras tanto, escribinos por WhatsApp para coordinar.</p>
             </div>
           </div>
         </div>
