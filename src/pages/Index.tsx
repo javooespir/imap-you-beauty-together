@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import logoImap from "@/assets/logo-imap.jpeg";
-import logoBianca from "@/assets/logo-bianca.jpeg";
+import logoImap from "@/assets/logo-imap.png";
+import logoBianca from "@/assets/logo-bianca.png";
 import heroSpa from "@/assets/hero-spa.jpg";
 import { Sparkles, Flower2, Hand, Waves, Scissors, Heart, MapPin, Phone, Instagram, CalendarClock } from "lucide-react";
 
@@ -20,7 +20,7 @@ const Index = () => {
       {/* NAV */}
       <header className="absolute top-0 inset-x-0 z-30 px-6 md:px-12 py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src={logoImap} alt="IMAP logo" className="h-12 w-12 rounded-full object-cover ring-1 ring-burgundy/20" />
+          <img src={logoImap} alt="IMAP logo" className="h-12 w-12 rounded-full object-contain bg-cream ring-1 ring-burgundy/20" />
           <div className="leading-tight">
             <p className="font-display text-burgundy text-lg">IMAP</p>
             <p className="text-[10px] tracking-[0.2em] text-burgundy/70 uppercase">Estética Integral</p>
@@ -40,7 +40,7 @@ const Index = () => {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
         <div className="absolute inset-0 opacity-40">
-          <img src={heroSpa} alt="Sala de tratamientos IMAP" className="w-full h-full object-cover" />
+          <img src={heroSpa} alt="Sala de tratamientos IMAP" className="w-full h-full object-contain bg-cream" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/40 to-transparent" />
 
@@ -68,8 +68,8 @@ const Index = () => {
           <div className="relative hidden md:flex justify-center">
             <div className="absolute -inset-10 bg-blush/30 rounded-full blur-3xl" />
             <div className="relative grid grid-cols-1 gap-6">
-              <img src={logoImap} alt="IMAP" className="w-64 h-64 rounded-full object-cover shadow-soft ring-1 ring-burgundy/10" />
-              <img src={logoBianca} alt="Bianca Cambiasso" className="w-44 h-44 rounded-full object-cover shadow-soft ring-1 ring-burgundy/10 ml-auto -mt-16" />
+              <img src={logoImap} alt="IMAP" className="w-64 h-64 rounded-full object-contain bg-cream shadow-soft ring-1 ring-burgundy/10" />
+              <img src={logoBianca} alt="Bianca Cambiasso" className="w-44 h-44 rounded-full object-contain bg-cream shadow-soft ring-1 ring-burgundy/10 ml-auto -mt-16" />
             </div>
           </div>
         </div>
@@ -94,11 +94,11 @@ const Index = () => {
           </div>
           <div className="flex items-center justify-center gap-8">
             <div className="text-center space-y-3">
-              <img src={logoImap} alt="IMAP" className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover shadow-soft mx-auto" />
+              <img src={logoImap} alt="IMAP" className="w-40 h-40 md:w-52 md:h-52 rounded-full object-contain bg-cream shadow-soft mx-auto" />
               <p className="font-display text-burgundy">IMAP</p>
             </div>
             <div className="text-center space-y-3">
-              <img src={logoBianca} alt="Bianca Cambiasso" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-soft mx-auto" />
+              <img src={logoBianca} alt="Bianca Cambiasso" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-contain bg-cream shadow-soft mx-auto" />
               <p className="font-display text-burgundy text-sm">Bianca Cambiasso</p>
             </div>
           </div>
@@ -129,7 +129,7 @@ const Index = () => {
       {/* COSMIATRIA HIGHLIGHT */}
       <section id="cosmiatria" className="py-24 md:py-32 bg-blush/30">
         <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
-          <img src={logoBianca} alt="Bianca Cambiasso" className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover shadow-soft mx-auto" />
+          <img src={logoBianca} alt="Bianca Cambiasso" className="w-72 h-72 md:w-96 md:h-96 rounded-full object-contain bg-cream shadow-soft mx-auto" />
           <div>
             <p className="text-xs tracking-[0.4em] text-rose-deep uppercase mb-4">Cosmiatría profesional</p>
             <h2 className="font-display text-4xl md:text-5xl text-burgundy mb-6 leading-tight">Tu piel, en manos expertas</h2>
@@ -179,8 +179,8 @@ const Index = () => {
         <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logoImap} alt="IMAP" className="h-14 w-14 rounded-full object-cover" />
-              <img src={logoBianca} alt="Bianca Cambiasso" className="h-14 w-14 rounded-full object-cover" />
+              <img src={logoImap} alt="IMAP" className="h-14 w-14 rounded-full object-contain bg-cream" />
+              <img src={logoBianca} alt="Bianca Cambiasso" className="h-14 w-14 rounded-full object-contain bg-cream" />
             </div>
             <p className="font-display text-2xl mb-2">IMAP & Bianca Cambiasso</p>
             <p className="text-cream/70 text-sm font-light">Centro de estética integral & cosmiatría.</p>
